@@ -35,18 +35,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+          <a class="navbar-brand" href="#">spokenNumberify</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right" role="form">
-            <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
-          </form>
+          
+          <a class="github btn btn-info pull-right glyphicon glyphicon-download-alt navbar-btn" href="https://github.com/listingslab/spokenNumberify" target="_blank"> Github</a>
+         
         </div><!--/.navbar-collapse -->
       </div>
     </nav>
@@ -54,36 +48,44 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
-        <h1>Hello, world!</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+        <h1>spokenNumberify</h1>
+        <p>Type a number from 0 to 999,999,999,999 into the box below to convert it into its spoken equivalent. </p>
+        
+        <div class="form-group">
+  
+  <input type="text" class="form-control" id="inputNumber">
+  <label for="inputNumber"></label>
+</div>
       </div>
     </div>
 
     <div class="container">
       <!-- Example row of columns -->
+      
+
       <div class="row">
         <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <h2>Overview</h2>
+          <p>We’d create a program with two functions for this task. The first function will take our input number and divide it into chunks of billions, millions, hundreds of thousands and thousands and combine everything into the final output. The second function will take these small chunks of number which and return their spoken values. As it happens, it will probably be easier to write the second function first. The process would be as follows:</p>
+          
         </div>
         <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <h2>Function 1</h2>
+          <p>Split the number into chunks using the comma as a separator ready to feed the pieces into the second function one by one. We’ll be able to tell from the length of the array how to build the result string. If there are 4 chunks, then we will suffix the first return with ‘billion’ such as x hundred and x’ty x billion. In this way we can build up the final spoke equivalent output.</p>
+          
        </div>
         <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <h2>Function 2</h2>
+          <p>This takes a parameter which can be from one to three digits and returns the spoken equivalent in the form of “x hundred and x’ty x’. The first thing is to judge the length of the input. If it’s 3 digits long, we take the first digit and turn it into hundreds. The digit is mapped to an array of number words to convert 3 to ‘three’. If there are only two digits, then we process the first digit as tens and map it to a different array with corresponding number words like ‘thirty’.
+</p>
+          
         </div>
       </div>
 
       <hr>
 
       <footer>
-        <p>&copy; Company 2015</p>
+        <p>&copy; listingslab</p>
       </footer>
     </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
@@ -91,5 +93,6 @@
         <script src="js/vendor/bootstrap.min.js"></script>
 
         <script src="js/main.js"></script>
+        <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
     </body>
 </html>
