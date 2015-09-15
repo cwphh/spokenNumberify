@@ -18,20 +18,26 @@ function convertNumber (num) {
 		} else if (digits >= 7 && digits < 10){
 			var millions = numStr.substring (0, digits-6);
 			ret += createHundreds (millions) + ' million';
-			var thousands = numStr.substring (1, digits-3);
-			if (thousands != 0){
+			var mLength = millions.toString().length;
+			var thousands = numStr.substring (mLength, mLength+3);
+			if (parseInt (thousands) != 0){
 				ret += ' ' + createHundreds (thousands) + ' thousand';
 			}
-			var hundreds = numStr.substring (4, digits);
-			if (hundreds != 0){
+			var hundreds = numStr.substring (mLength+3, mLength+6);
+			if (parseInt (hundreds) != 0){
 				ret += ' ' + createHundreds (hundreds);
 			}
-		} else if (digits >= 10 && digits <= 12){
+		}
+		 else if (digits >= 10 && digits <= 12){
 			var billions = numStr.substring (0, digits-9);
 			ret += createHundreds (billions) + ' billion';
-			var millions = numStr.substring (digits, digits-6);
-			console.log (millions);
-			ret += createHundreds (millions) + ' million';
+			var bLength = billions.toString().length;
+			var millions = numStr.substring (bLength, bLength+3);
+			if (parseInt (millions) != 0){
+				ret += ' ' + createHundreds (millions) + ' million';
+			}
+
+
 		}
 		ret += '.';
 		return ret;
