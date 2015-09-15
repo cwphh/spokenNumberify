@@ -2,7 +2,7 @@ $( document ).ready(function() {
 	try {
 		$('#inputNumber').focus ();	
 		$('#inputNumber').keyup(function() {
-			validateNumber(); 
+			validate(); 
 		});
 	}catch (err){
 		console.log (err);

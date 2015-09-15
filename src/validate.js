@@ -1,4 +1,4 @@
-function validateNumber() {
+function validate() {
 	try {
 		var valid = true;
 		var errorTxt;
@@ -9,8 +9,7 @@ function validateNumber() {
 		}
 		if (iptVal>999){
 			valid = false;
-			errorTxt = 'This number exceeds the maximum 
-			of 999';
+			errorTxt = 'This number exceeds the maximum of 999';
 		}
 		if (valid){
 			var spokenEq = convertToSpoken (iptVal);
