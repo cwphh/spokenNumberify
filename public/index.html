@@ -58,7 +58,7 @@
         <div class="form-group" id="inputForm">
           <label class="control-label" for="inputSuccess">Converts a number from its spoken equivalent.</label>
           <input type="number" class="form-control" id="inputNumber">
-          <div id="output">Enter a number between 1 and 999999999999</div>
+          <h4><div id="output">Enter a number between 1 and 999999999999</div></h4>
         </div>
 
       </div>
@@ -79,7 +79,7 @@
             <div class="panel-heading">1. Starting the App</div>
             <div class="panel-body fixed-panel">
               
-              <div class="fixed-height-150">Using the type="text" parameter in the input field restricts the input to numbers only. Then we add a keyup event to run our program every time the value in the input changes and focus the cursor in the box.</div>
+              <p>Basic validation is done using the type="text" parameter in the input field whichrestricts the input to numbers only. Then we add a keyup event to run our program every time the value in the input changes and focus the cursor in the box.</p>
 
               <a class="btn btn-primary pull-right" href="https://github.com/listingslab/spokenNumberify/blob/master/src/main.js" target="_blank" role="button">View main.js</a>
             </div>
@@ -92,8 +92,8 @@
           <div class="panel panel-default">
             <div class="panel-heading">2. Validate Input</div>
             <div class="panel-body">
-              <div class="fixed-height-150">We do a quick validation of the number to make sure it's not too large or NaN (Not a number). If the number isn't valid we'll turn the input box red and display an error message
-              </div>
+              <p>We do a quick validation of the number to make sure it's not too large or NaN (Not a number). If the number isn't valid we'll turn the input box red and display an error message. If the number is valid, we get to the core of the program.
+              </p>
 
               <p><a class="btn btn-primary pull-right" href="https://github.com/listingslab/spokenNumberify/blob/master/src/validate.js" target="_blank" role="button">View validate.js</a></p>
             </div>
@@ -103,6 +103,22 @@
       
     </div>
 
+    <div class="row">
+      <div class="col-md-6">
+          <div class="panel panel-default">
+            <div class="panel-heading">3. Split Number</div>
+            <div class="panel-body">
+              
+              <p>
+                This is where it gets interesting.
+              </p>
+
+              <a class="btn btn-primary pull-right" href="https://github.com/listingslab/spokenNumberify/blob/master/src/main.js" target="_blank" role="button">View splitNumber.js</a>
+            </div>
+          </div>
+          
+        </div>
+    </div>
       <hr>
 
       <footer>

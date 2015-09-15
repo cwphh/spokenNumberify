@@ -5,16 +5,16 @@ function validate() {
 		var iptVal = parseInt ($('#inputNumber').val());
 		if (isNaN(iptVal)){
 			valid = false;
-			errorTxt = 'This number is invalid';
+			errorTxt = 'Please enter a valid number';
 		}
-		if (iptVal>999){
+		if (iptVal>999999999999){
 			valid = false;
-			errorTxt = 'This number exceeds the maximum of 999';
+			errorTxt = 'This number exceeds the maximum of 999999999999';
 		}
 		if (!valid){
 			printError (errorTxt);
 		}else{
-			printEquivalent ('all good');
+			printEquivalent (createWords(iptVal));
 		}
 	}catch (err){
 		console.log (err);
