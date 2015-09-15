@@ -1,7 +1,6 @@
 function createHundreds (num) {
 	try {
 		var ret = '';
-		var ones = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
 		var tens = ['none', 'ten', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
 		var numStr = num.toString ();
 		var num = parseInt(num);
