@@ -11,14 +11,11 @@ function validate() {
 			valid = false;
 			errorTxt = 'This number exceeds the maximum of 999';
 		}
-		if (valid){
-			var spokenEq = convertToSpoken (iptVal);
-			printOutput (spokenEq, true);
+		if (!valid){
+			printError (errorTxt);
 		}else{
-			printOutput (errorTxt, false);
-			
+			printEquivalent ('all good');
 		}
-		console.log (iptVal);
 	}catch (err){
 		console.log (err);
 	}

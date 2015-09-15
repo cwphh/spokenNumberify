@@ -15,7 +15,9 @@ module.exports = function(grunt) {
 					'public/js/spokenNumberify.min.js': 
 					[
 						'src/main.js',
-						'src/validate.js'
+						'src/validate.js',
+						'src/printError.js',
+						'src/printEquivalent.js'
 					]
 				}
 			}

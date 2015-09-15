@@ -71,22 +71,37 @@
       <div class="row">
         <div class="col-md-4">
           <h2>The Task</h2>
-          <p>Create an App that takes a number [0 - 999,999,999,999] and converts it into its spoken equivalent. For example, 167 would convert to "one hundred and sixty seven".</p>
+          <p><b>Create an App that takes a number [0 - 999,999,999,999] and converts it into its spoken equivalent. For example, 167 would convert to "one hundred and sixty seven".</b></p>
         </div>
         
         <div class="col-md-4">
-          <h2>1. Starting the App</h2>
-          <p>Using the type="text" parameter in the input field restricts the input to numbers only. Then we add a keyup event to run our program every time the value in the input changes and focus the cursor in the box.</p>
-          <p><a class="btn btn-primary" href="https://github.com/listingslab/spokenNumberify/blob/master/src/main.js" target="_blank" role="button">View Source</a></p>
+          <div class="panel panel-default">
+            <div class="panel-heading">1. Starting the App</div>
+            <div class="panel-body fixed-panel">
+              
+              <div class="fixed-height-150">Using the type="text" parameter in the input field restricts the input to numbers only. Then we add a keyup event to run our program every time the value in the input changes and focus the cursor in the box.</div>
+
+              <a class="btn btn-primary pull-right" href="https://github.com/listingslab/spokenNumberify/blob/master/src/main.js" target="_blank" role="button">View main.js</a>
+            </div>
+          </div>
+          
         </div>
 
         <div class="col-md-4">
-          <h2>2. Validate</h2>
-          <p>We do a quick validation of the number to make sure it's not too large or NaN (Not a number).</p>
-          <p><a class="btn btn-primary" href="https://github.com/listingslab/spokenNumberify/blob/master/src/validate.js" target="_blank" role="button">View Source</a></p>
-        </div>
 
+          <div class="panel panel-default">
+            <div class="panel-heading">2. Validate Input</div>
+            <div class="panel-body">
+              <div class="fixed-height-150">We do a quick validation of the number to make sure it's not too large or NaN (Not a number). If the number isn't valid we'll turn the input box red and display an error message
+              </div>
+
+              <p><a class="btn btn-primary pull-right" href="https://github.com/listingslab/spokenNumberify/blob/master/src/validate.js" target="_blank" role="button">View validate.js</a></p>
+            </div>
+        </div>
       </div>
+
+      
+    </div>
 
       <hr>
 
