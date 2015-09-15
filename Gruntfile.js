@@ -17,8 +17,7 @@ module.exports = function(grunt) {
 						'src/main.js',
 						'src/validate.js',
 						'src/convertNumber.js',
-						'src/createWords.js',
-						'src/print.js',
+						'src/createWords.js'
 					]
 				}
 			}
