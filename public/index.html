@@ -41,9 +41,15 @@
           </a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          
+
           <a class="github btn btn-danger btn-sm pull-right glyphicon glyphicon-download-alt navbar-btn" href="https://github.com/listingslab/spokenNumberify/archive/master.zip" target="_blank"> Download</a>
-         
+
+          <a class="btn btn-success btn-sm pull-right navbar-btn" href="https://github.com/listingslab/spokenNumberify/blob/master/src/validate.js" target="_blank" role="button"> validate.js</a>
+
+          <a class="btn btn-success btn-sm pull-right navbar-btn" href="https://github.com/listingslab/spokenNumberify/blob/master/src/main.js" target="_blank" role="button"> main.js</a>
+
+          
+
         </div><!--/.navbar-collapse -->
       </div>
     </nav>
@@ -56,7 +62,7 @@
         <div class="form-group" id="inputForm">
           
           <input type="number" class="form-control" id="inputNumber">
-          <h4><div id="output">Enter a number between 1 and 999999999999</div></h4>
+          <h4><div id="output">Please enter a whole number between 0 and 999999999999</div></h4>
         </div>
 
       </div>
@@ -78,7 +84,6 @@
             <div class="panel-body fixed-panel">
               <h3>1. Start the App</h3>
               <p>Basic validation is done using the type="text" parameter in the input field which restricts the input to numbers only. Then we add a keyup event to run our program every time the value in the input changes and focus the cursor in the box.</p>
-              <a class="btn btn-success btn-sm pull-right glyphicon glyphicon-link" href="https://github.com/listingslab/spokenNumberify/blob/master/src/main.js" target="_blank" role="button"> main.js</a>
             </div>
           </div>
         </div>
@@ -89,7 +94,6 @@
               <h3>2. Validate Input</h3>
               <p>We do a quick validation of the number to make sure it's not too large or NaN (Not a number). If the number isn't valid we'll turn the input box red and display an error message. If the number is valid, we get to the core of the program.
               </p>
-              <p><a class="btn btn-success btn-sm pull-right glyphicon glyphicon-link" href="https://github.com/listingslab/spokenNumberify/blob/master/src/validate.js" target="_blank" role="button"> validate.js</a></p>
             </div>
         </div>
       </div>

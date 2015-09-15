@@ -36,8 +36,14 @@ function convertNumber (num) {
 			if (parseInt (millions) != 0){
 				ret += ' ' + createHundreds (millions) + ' million';
 			}
-
-
+			var thousands = numStr.substring (bLength+3, bLength+6);
+			if (parseInt (thousands) != 0){
+				ret += ' ' + createHundreds (thousands) + ' thousand';
+			}
+			var hundreds = numStr.substring (bLength+6, bLength+9);
+			if (parseInt (hundreds) != 0){
+				ret += ' ' + createHundreds (hundreds);
+			}
 		}
 		ret += '.';
 		return ret;

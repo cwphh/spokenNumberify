@@ -14,14 +14,11 @@ module.exports = function(grunt) {
 				files: {
 					'public/js/spokenNumberify.min.js': 
 					[
-						'src/convertNumber.js',
-						'src/createHundreds.js',
-						'src/createOnes.js',
-						'src/createTens.js',
 						'src/main.js',
-						'src/printError.js',
-						'src/printEquivalent.js',
 						'src/validate.js',
+						'src/convertNumber.js',
+						'src/createWords.js',
+						'src/print.js',
 					]
 				}
 			}

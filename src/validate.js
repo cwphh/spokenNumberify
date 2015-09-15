@@ -7,7 +7,11 @@ function validate() {
 			valid = false;
 			errorTxt = 'Please enter a valid number';
 		}
-		if (iptVal>999999999999){
+		if (iptVal < 0){
+			valid = false;
+			errorTxt = 'Please enter a whole number between 0 and 999999999999';
+		}
+		if (iptVal > 999999999999){
 			valid = false;
 			errorTxt = 'This number exceeds the maximum of 999999999999';
 		}

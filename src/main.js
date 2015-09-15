@@ -1,9 +1,9 @@
 $( document ).ready(function() {
 	try {
-		$('#inputNumber').focus ();	
 		$('#inputNumber').keyup(function() {
 			validate(); 
 		});
+		$('#inputNumber').focus ();
 	}catch (err){
 		console.log (err);
 	}
