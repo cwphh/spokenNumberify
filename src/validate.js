@@ -14,7 +14,7 @@ function validate() {
 		if (!valid){
 			printError (errorTxt);
 		}else{
-			printEquivalent (createWords(iptVal));
+			printEquivalent (convertNumber (iptVal));
 		}
 	}catch (err){
 		console.log (err);
