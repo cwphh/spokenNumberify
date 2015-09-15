@@ -1,17 +1,24 @@
 # spokenNumberify
 
+This app is built using an HTML5 Boilerplate with Twitter's Bootstrap from https://html5boilerplate.com. 
+
+It was built using modern Front end build tools such as Node.js package manager npm, Grunt, JSHint and more.
+
+## The Task
+
 Describe the process that will take a number [0 - 999,999,999,999] and convert it into its spoken equivalent. For example, 167 would convert to "one hundred and sixty seven".
 
-We’d create a program with two functions for this task. The first function will take our input number and divide it into chunks of billions, millions, hundreds of thousands and thousands and combine everything into the final output. The second function will take these small chunks of number which and return their spoken values. As it happens, it will probably be easier to write the second function first. The process would be as follows:
+## The Solution
 
-Build Function 2
+1. Start the App
+Basic validation is done using the type="text" parameter in the input field which restricts the input to numbers only. Then we add a keyup event to run our program every time the value in the input changes and focus the cursor in the box.
 
-This takes a parameter which can be from one to three digits and returns the spoken equivalent in the form of “x hundred and x’ty x’. The first thing is to judge the length of the input. If it’s 3 digits long, we take the first digit and turn it into hundreds. The digit is mapped to an array of number words to convert 3 to ‘three’. If there are only two digits, then we process the first digit as tens and map it to a different array with corresponding number words like ‘thirty’.
+2. Validate Input
+We do a quick validation of the number to make sure it's not too large or NaN (Not a number). If the number isn't valid we'll turn the input box red and display an error message. If the number is valid, we get to the core of the program.
 
-Build Function 1
+3. Convert the number
+To convert the number to its spoken equivalent we first find out how many digits it has. This gives us an idea of it's size. If it's got 7 digits, then it is some millions. If it only has 3, then it is in the hundreds.
 
-Split the number into chunks using the comma as a separator ready to feed the pieces into the second function one by one. We’ll be able to tell from the length of the array how to build the result string. If there are 4 chunks, then we will suffix the first return with ‘billion’ such as x hundred and x’ty x billion. In this way we can build up the final spoke equivalent output.
+We can then carefully work our way through the number, splitting it into chunks which we can run through another process to return the word values and suffix them with the size of the chunks.
 
-Testing & Tweaking
-
-Once the two functions are written it’s time to test them out to see how they perform. It’s likely that we’ll quickly find some scenarios where tweaks are needed. We’d probably need to add a few conditionals in the functions to handle certain situations such as plurals & ‘and’ words. That’s pretty much it.
+For instance if we have the number 13675. We can tell from the fact it has 5 digits that it is some tens of thousands. We slice off and process the first two digits from the number which gives us thirteen thousand. We can then run the rest of the digits through the same process and proviving it isn't zero, we'll know to add the words and six hundred and seventy five.
