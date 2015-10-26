@@ -1,6 +1,6 @@
 {
   "name": "spokennumberify",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Type a number from 0 to 999,999,999,999 into the box below to convert it into its spoken equivalent.",
   "main": "public/js/main.js",
   "scripts": {
